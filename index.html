@@ -20,7 +20,7 @@
         <nav class="navigation">
           <a href="index.html" class="logotype link"><span class="highlight">Web</span>Studio</a>
           <ul class="navigation-items">
-            <li class="navigation-item"><a href="" class="link">Agencja</a></li>
+            <li class="navigation-item"><a href="" class="link activepage">Agencja</a></li>
             <li class="navigation-item"><a href="portfolio.html" class="link">Portfolio</a></li>
             <li class="navigation-item"><a href="" class="link">Kontakt</a></li>
           </ul>
@@ -48,7 +48,7 @@
     <main>
       <section class="head">
         <h1 class="head-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button class="head-button" type="button">Zamów usługę</button>
+        <button class="head-button" type="button" data-modal-open>Zamów usługę</button>
       </section>
       <section class="contents container section">
         <ul class="contents-items">
@@ -105,29 +105,32 @@
       <section class="expansion container section">
         <h2 class="expansion-title">Czym się zajmujemy</h2>
         <ul class="expansion-img">
-          <li>
+          <li class="expansion_pic">
             <img
               src="https://raw.githubusercontent.com/LuizaRaczylo/goit-markup-hw-01/main/images/box%201.jpg"
               alt="widok na dłonie piszące na klawiaturze przed tabletem"
               width="370"
               height="294"
             />
+            <p class="label">APLIKACJE KOMPUTEROWE</p>
           </li>
-          <li>
+          <li class="expansion_pic">
             <img
               src="https://raw.githubusercontent.com/LuizaRaczylo/goit-markup-hw-01/main/images/box%202.jpg"
               alt="osoba pracująca przed laptopem, z telefonem w dłoni"
               width="370"
               height="294"
             />
+            <p class="label">APLIKACJE MOBILNE</p>
           </li>
-          <li>
+          <li class="expansion_pic">
             <img
               src="https://raw.githubusercontent.com/LuizaRaczylo/goit-markup-hw-01/main/images/box%203.jpg"
               alt="widok na tablet i rysik trzymane w dłoniach"
               width="370"
               height="294"
             />
+            <p class="label">ROZWIĄZANIA GRAFICZNE</p>
           </li>
         </ul>
       </section>
@@ -413,5 +416,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="icon-close-btn">
+          <use href="./images/close.svg#icon-close-black2"></use>
+        </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
