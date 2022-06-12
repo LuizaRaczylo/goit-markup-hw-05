@@ -258,7 +258,7 @@ ul {
 .expansion_pic> .label {
     position: absolute;
     margin: 0;
-    bottom: 0;
+    bottom: 4px;
 }
 /* nasz zespół */
 .team {
@@ -496,6 +496,7 @@ ul {
     flex-wrap: wrap;
 }
 .offer-class-item {
+    position: relative;
     width: 370px; 
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -511,6 +512,29 @@ ul {
 }
 .offer-class-img {
     margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.offer-class-img:hover .overlay,
+.offer-class-img:focus .overlay {
+    box-shadow: box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translatey(0%);
+}
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(33, 150, 243, 0.9);  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--bright-color);
+    width: 370px;
+    height: 294px;
+    padding: 49px 45px 49px 24px;
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+}
+.overlay_text {
+    font-size: 18px;
 }
 .offer-category {
     color: var(--detail-color);
@@ -521,6 +545,8 @@ ul {
     display: block;
 }
 .offer-class-img figcaption {
+    transform: translateY(0);
+    background-color: var(--bright-color);
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
 }
@@ -541,7 +567,8 @@ ul {
     width: 528px;
     min-height: 581px;
     background-color: var(--bright-color);    
-    animation: animate125 3000ms;
+    animation: pulse;
+    animation-duration: 3000ms;
 }
 .close-btn {
     position: absolute;
@@ -566,14 +593,4 @@ ul {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
-@keyframes animate125 {
-    0% {opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;  
-    }
 }
