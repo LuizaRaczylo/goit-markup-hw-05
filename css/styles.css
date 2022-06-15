@@ -97,6 +97,13 @@ ul {
 }
 .link, .footer-link {
     text-decoration: none;
+}
+.logotype, 
+.navigation-item, 
+.contact-item1, 
+.contact-item2,
+.footer-link,
+.footer-contact {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -121,7 +128,7 @@ ul {
     position: relative;
     border-top: 4px solid var(--brand-color);
     border-radius: 2px;
-    top: 29px;
+    top: 31px;
 }
 .link:hover,
 .link:focus,
@@ -558,6 +565,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    animation: pulse 3000ms;
 }
 .modal {
     position: absolute;
@@ -566,9 +574,7 @@ ul {
     transform: translate(-50%, -50%);
     width: 528px;
     min-height: 581px;
-    background-color: var(--bright-color);    
-    animation: pulse;
-    animation-duration: 3000ms;
+    background-color: var(--bright-color); 
 }
 .close-btn {
     position: absolute;
