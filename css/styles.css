@@ -95,16 +95,9 @@ ul {
 ul {
     list-style-type: none;
 }
-.link, .footer-link {
+.link, .footer-link, .link svg {
     text-decoration: none;
-}
-.logotype, 
-.navigation-item, 
-.contact-item1, 
-.contact-item2,
-.footer-link,
-.footer-contact {
-    transition-property: color;
+    transition-property: color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -565,7 +558,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    animation: pulse 3000ms;
+    transition: 2000ms;
 }
 .modal {
     position: absolute;
@@ -575,6 +568,7 @@ ul {
     width: 528px;
     min-height: 581px;
     background-color: var(--bright-color); 
+    transition: 2000ms;
 }
 .close-btn {
     position: absolute;
